@@ -255,7 +255,10 @@ function SubcribesUserPosts(props) {
                                                                     : "/profile"
                                                             }
                                                         >
-                                                            {item.postedBy.name}
+                                                            {
+                                                                record.postedBy
+                                                                    .name
+                                                            }
                                                         </Link>
                                                     }
                                                     avatar={
@@ -276,7 +279,6 @@ function SubcribesUserPosts(props) {
                                     </div>
                                     <form
                                         onSubmit={(e) => {
-                                            console.log(item.poste);
                                             e.preventDefault();
                                             makeComment(
                                                 e.target[0].value,
