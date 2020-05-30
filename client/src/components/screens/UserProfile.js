@@ -138,7 +138,7 @@ function UserProfile(props) {
                         <div
                             style={{
                                 display: "flex",
-                                margin: "18px 5px",
+                                padding: "18px 5px",
                                 borderBottom: "1px solid #ddd",
                             }}
                         >

@@ -146,10 +146,11 @@ h2 {
 	.profile-avatar {
 		width: 100px;
 		height: 100px;
+		margin-left: 0px;
 	}
 
 	h5 {
-		font-size: 16px;
+		font-size: 1.4rem;
 	}
 }
 
