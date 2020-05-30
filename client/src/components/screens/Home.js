@@ -223,11 +223,9 @@ function Home(props) {
                                         </i>
                                     )}
                                     <span>{item.likes.length} likes</span>
-                                    <hr />
                                     <h6>{item.title}</h6>
-                                    <p style={{ marginLeft: "10px" }}>
-                                        {item.body}
-                                    </p>
+                                    <p>{item.body}</p>
+                                    <hr />
                                     <div style={{ marginTop: "10px" }}>
                                         {item.comments.map((record, index) => {
                                             return (
