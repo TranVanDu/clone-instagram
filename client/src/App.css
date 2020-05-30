@@ -132,6 +132,11 @@ h2 {
 		border: none;
 	}
 
+	.card {
+		box-shadow: none;
+		border: none;
+	}
+
 	.mycard {
 		margin: 10px 0px;
 		border: none;
@@ -144,7 +149,7 @@ h2 {
 	}
 
 	h5 {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
