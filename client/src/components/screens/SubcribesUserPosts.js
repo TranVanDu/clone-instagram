@@ -3,6 +3,7 @@ import Preloader from "./Preloader";
 import { UserContext } from "../../App";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
+import { Comment, Avatar } from "antd";
 // import PropTypes from "prop-types";
 
 // Home.propTypes = {};
