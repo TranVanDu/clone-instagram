@@ -255,7 +255,10 @@ function Home(props) {
                                                                     : "/profile"
                                                             }
                                                         >
-                                                            {item.postedBy.name}
+                                                            {
+                                                                record.postedBy
+                                                                    .name
+                                                            }
                                                         </Link>
                                                     }
                                                     avatar={

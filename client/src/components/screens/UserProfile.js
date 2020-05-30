@@ -159,10 +159,10 @@ function UserProfile(props) {
                                     {showFollow ? (
                                         <button
                                             style={{
-                                                marginTop: "15px",
+                                                marginTop: "0px",
                                                 marginLeft: "10px",
-                                                fontSize: "10px",
-                                                padding: "0px 10px",
+                                                fontSize: "7px",
+                                                padding: "0px 5px",
                                             }}
                                             className="btn  #64b5f6 blue lighten-2"
                                             onClick={follower}
