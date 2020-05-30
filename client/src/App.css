@@ -142,6 +142,10 @@ h2 {
 		width: 100px;
 		height: 100px;
 	}
+
+	h5 {
+		font-size: 18px;
+	}
 }
 
 @media (max-width: 400px) {
