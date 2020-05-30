@@ -149,6 +149,11 @@ function SubcribesUserPosts(props) {
                         data.map((item, index) => (
                             <div key={index} className="card home-card">
                                 <h5 className="home-title">
+                                    <Avatar
+                                        style={{ marginRight: "5px" }}
+                                        src={item.postedBy.pic}
+                                        alt="avatar"
+                                    />
                                     <Link
                                         to={
                                             item.postedBy._id !== state._id
@@ -192,7 +197,7 @@ function SubcribesUserPosts(props) {
                                         alt={item.title}
                                     />
                                 </div>
-                                <div className="card-content input-field">
+                                <div className="card-content">
                                     {item.likes.includes(state._id) ? (
                                         <i
                                             className="material-icons"
@@ -216,23 +221,58 @@ function SubcribesUserPosts(props) {
                                             favorite
                                         </i>
                                     )}
-                                    <h6>{item.likes.length} likes</h6>
+                                    <span>{item.likes.length} likes</span>
                                     <h6>{item.title}</h6>
                                     <p>{item.body}</p>
-                                    {item.comments.map((record) => {
-                                        return (
-                                            <h6 key={record._id}>
-                                                <span
-                                                    style={{
-                                                        fontWeight: "500",
-                                                    }}
-                                                >
-                                                    {record.postedBy.name}
-                                                </span>
-                                                <span> {record.text}</span>
-                                            </h6>
-                                        );
-                                    })}
+                                    <hr />
+                                    <div style={{ marginTop: "10px" }}>
+                                        {item.comments.map((record, index) => {
+                                            return (
+                                                <Comment
+                                                    key={index}
+                                                    // actions={[
+                                                    //     <span key="comment-nested-reply-to">
+                                                    //         Reply to
+                                                    //     </span>,
+                                                    // ]}
+                                                    author={
+                                                        // <Link>
+                                                        //     {
+                                                        //         record.postedBy
+                                                        //             .name
+                                                        //     }
+                                                        // </Link>
+                                                        <Link
+                                                            to={
+                                                                record.postedBy
+                                                                    ._id !==
+                                                                state._id
+                                                                    ? "/profile/" +
+                                                                      record
+                                                                          .postedBy
+                                                                          ._id
+                                                                    : "/profile"
+                                                            }
+                                                        >
+                                                            {item.postedBy.name}
+                                                        </Link>
+                                                    }
+                                                    avatar={
+                                                        <Avatar
+                                                            src={
+                                                                record.postedBy
+                                                                    .pic
+                                                            }
+                                                            alt="Han Solo"
+                                                        />
+                                                    }
+                                                    content={
+                                                        <p>{record.text}</p>
+                                                    }
+                                                ></Comment>
+                                            );
+                                        })}
+                                    </div>
                                     <form
                                         onSubmit={(e) => {
                                             console.log(item.poste);
@@ -246,6 +286,7 @@ function SubcribesUserPosts(props) {
                                     >
                                         <input
                                             type="text"
+                                            style={{ borderBottom: "none" }}
                                             placeholder="add a comment"
                                             value={text}
                                             onChange={(e) => {
