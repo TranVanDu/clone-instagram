@@ -128,13 +128,7 @@ function Profile(props) {
                         margin: "0px auto",
                     }}
                 >
-                    <div
-                        style={{
-                            display: "flex",
-                            padding: "18px 10px",
-                            borderBottom: "1px solid #ddd",
-                        }}
-                    >
+                    <div className="profile">
                         <div
                             style={{
                                 display: "flex",
@@ -159,7 +153,7 @@ function Profile(props) {
                                 Change
                             </button>
                         </div>
-                        <div>
+                        <div className="profile-details">
                             <h5>{state ? state.name : null}</h5>
                             <h6>{state ? state.email : null}</h6>
                             <div

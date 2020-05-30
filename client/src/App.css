@@ -37,11 +37,21 @@ h2 {
 	margin-top: 30px;
 }
 
+.profile {
+	display: flex;
+	padding: 18px 100px;
+	border-bottom: 1px solid #ddd;
+}
+
+.profile-details {
+	padding-left: 5vh;
+}
+
 .profile-avatar {
 	width: 180px;
 	height: 180px;
 	border-Radius: 50%;
-	margin: 0px 5vw;
+	margin: 0px 0px;
 }
 
 .btn-avatar {
@@ -51,14 +61,39 @@ h2 {
 	bottom: 5px;
 	display: none;
 	cursor: pointer;
+	background: #fff;
+	border-radius: 7px;
+	border: 1px solid #eee;
 }
 
 .profile-avatar:hover+.btn-avatar {
 	display: flex;
+	background-color: rgb(43, 137, 226);
 }
 
 .btn-avatar:hover {
 	display: flex;
+	background-color: rgb(43, 137, 226);
+}
+
+.btn-follow {
+	margin-top: 0px;
+	margin-left: 10px;
+	font-size: 10px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	border-radius: 7px;
+	cursor: pointer;
+	width: 50px;
+	height: 30px;
+}
+
+.btn-follow:focus {
+	background-color: #fff;
+}
+
+.btn-follow:hover {
+	background-color: rgba(144, 180, 247, 0.87);
 }
 
 
@@ -118,6 +153,17 @@ h2 {
 }
 
 @media (max-width: 500px) {
+	.profile {
+		display: flex;
+		padding: 18px 7px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.profile-details {
+		padding-left: 10px;
+	}
+
+
 	.mr-2 {
 		font-size: 12px;
 	}

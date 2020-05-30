@@ -135,13 +135,7 @@ function UserProfile(props) {
                             margin: "0px auto",
                         }}
                     >
-                        <div
-                            style={{
-                                display: "flex",
-                                padding: "18px 5px",
-                                borderBottom: "1px solid #ddd",
-                            }}
-                        >
+                        <div className="profile">
                             <div>
                                 <img
                                     className="profile-avatar"
@@ -153,31 +147,19 @@ function UserProfile(props) {
                                     alt="avatar"
                                 />
                             </div>
-                            <div>
+                            <div className="profile-details">
                                 <div style={{ display: "flex" }}>
                                     <h5>{userProfile.user.name}</h5>
                                     {showFollow ? (
                                         <button
-                                            style={{
-                                                marginTop: "0px",
-                                                marginLeft: "10px",
-                                                fontSize: "7px",
-                                                padding: "0px 5px",
-                                            }}
-                                            className="btn  #64b5f6 blue lighten-2"
+                                            className="btn-follow"
                                             onClick={follower}
                                         >
                                             follow
                                         </button>
                                     ) : (
                                         <button
-                                            style={{
-                                                marginTop: "15px",
-                                                marginLeft: "10px",
-                                                fontSize: "10px",
-                                                padding: "0px 10px",
-                                            }}
-                                            className="btn  #64b5f6 blue lighten-2"
+                                            className="btn-follow"
                                             onClick={unfolow}
                                         >
                                             unfollow
